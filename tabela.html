@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
+    <title>Formulário de Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('imagens/planoft.jpg') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans flex flex-col min-h-screen bg-opacity-100">
+
+    <nav class="bg-blue-400 text-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold flex items-center space-x-2">
+                <img src="imagens/marca.png" alt="Logo" class="h-20 w-19 ml-1  text-pink-500">
+            </a>
+            <div class="space-x-4 flex">
+                <div class="bg-pink-500 p-2 rounded transition duration-300 text-white hover:bg-pink-700">
+                    <a href="index.html">Início</a>
+                </div>
+                <div class="bg-pink-500 p-2 rounded transition duration-300 text-white hover:bg-pink-700">
+                    <a href="cronograma.html">Cronograma</a>
+                </div>
+                <div class="bg-pink-500 p-2 rounded transition duration-300 text-white hover:bg-pink-700">
+                    <a href="tabela.html">Formulário</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mx-auto p-4 flex-grow">
+        <form class="bg-blue-400 p-7 rounded shadow-md max-w-md mx-auto border-2 border-white "><h1 class="text-2xl font-semibold text-white text-center">Formulário de Contato</h1></form>
+
+        <form action="processar_formulario.php" method="post" class="bg-blue-400 p-8 rounded shadow-md max-w-md mx-auto border-2 border-white">
+            <div class="mb-4">
+                <label for="nome" class="block  font-semibold text-white mb-2">Nome:</label>
+                <div class="relative">
+                    <input type="text" id="nome" name="nome" required
+                        class="w-full p-3 border border-blue-300 rounded focus:outline-none focus:border-blue-600 " >
+                    <span class="absolute right-3 top-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="telefone" class="block  font-semibold text-white mb-2">Telefone:</label>
+                <div class="relative">
+                    <input type="tel" id="telefone" name="telefone" required
+                        class="w-full p-3 border border-blue-300 rounded focus:outline-none focus:border-blue-600 ">
+                    <span class="absolute right-3 top-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block  font-semibold text-white mb-2">Email:</label>
+                <div class="relative">
+                    <input type="email" id="email" name="email" required
+                        class="w-full p-3 border border-blue-300 rounded focus:outline-none focus:border-blue-600 ">
+                    <span class="absolute right-3 top-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="assunto" class="block  font-semibold text-white mb-2">Assunto:</label>
+                <div class="relative">
+                    <input type="text" id="assunto" name="assunto" required
+                        class="w-full p-3 border border-blue-300 rounded focus:outline-none focus:border-blue-600 ">
+                    <span class="absolute right-3 top-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="mensagem" class="block font-semibold text-white mb-2">Mensagem:</label>
+                <div class="relative">
+                    <textarea id="mensagem" name="mensagem" rows="4" required
+                        class="w-full p-3 border border-blue-300 rounded focus:outline-none focus:border-blue-600 "></textarea>
+                    <span class="absolute right-3 bottom-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24" class="w-6 h-6">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit"
+                class="bg-pink-500  py-2 px-4 rounded hover:bg-pink-700 focus:outline-none focus:shadow-outline-green transition duration-300 text-white" >
+                Enviar Mensagem
+            </button>
+        </form>
+    </div>
+    <!-- Botão Flutuante no Canto Inferior Esquerdo -->
+    <div class="fixed bottom-28 left-4 z-50">
+        <button onclick="toggleFooter()" class="bg-blue-400 text-white py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue transition duration-300" title="Criadores do site">
+            ?
+        </button>
+    </div>
+
+    <!-- Rodapé inicialmente oculto -->
+    <footer id="meuRodape" class="sticky bottom-0 bg-blue-400 p-4 text-center opacity-0 transition-opacity  text-white duration-300 z-50"> 
+        <!-- Conteúdo do rodapé aqui -->
+        Criadores do site: Aecio Santos Nascimento Junior e Guilherme Jordan de Jesus Nascimento</br>
+        Curso: ADS </br>
+        Faculdade: Uninassau (SE)
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade do rodapé
+        function toggleFooter() {
+            const footer = document.getElementById('meuRodape');
+            footer.classList.toggle('opacity-0');
+            footer.classList.toggle('opacity-100');
+        }
+    </script>
+
+
+
+</body>
+</html>

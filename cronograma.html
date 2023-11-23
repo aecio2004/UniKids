@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo.ico" type="image/x-icon">
+    <title>Cronograma Escolar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('imagens/planoft.jpg') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans flex flex-col min-h-screen">
+
+    <nav class="bg-blue-400 text-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold flex items-center space-x-2">
+                <img src="imagens/marca.png" alt="Logo" class="h-20 w-19 ml-1  text-pink-500">
+            </a>
+            <div class="space-x-4 flex">
+                <div class="bg-pink-500 p-2 rounded transition text-white duration-300 hover:bg-pink-700">
+                    <a href="index.html">Início</a>
+                </div>
+                <div class="bg-pink-500 p-2 rounded transition text-white duration-300 hover:bg-pink-700">
+                    <a href="cronograma.html">Cronograma</a>
+                </div>
+                <div class="bg-pink-500 p-2 rounded transition text-white duration-300 hover:bg-pink-700">
+                    <a href="tabela.html">Formulário</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 flex-grow">
+
+        <form class="bg-blue-400 p-7 rounded shadow-md max-w-md mx-auto border-2 border-white ">
+            <h1 class="text-3xl font-semibold text-white text-center mb-4">Cronograma Escolar</h1>
+        </form>
+        <br>
+
+        <!-- Tabela de Horários -->
+        <table class="w-full text-left bg-blue-400 p-4 rounded shadow-md text-white">
+            <thead>
+                <tr>
+                    <th class="px-2 py-2">Horário</th>
+                    <th class="px-2 py-2">Segunda</th>
+                    <th class="px-2 py-2">Terça</th>
+                    <th class="px-2 py-2">Quarta</th>
+                    <th class="px-2 py-2">Quinta</th>
+                    <th class="px-2 py-2">Sexta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Horários de 7h às 11h, pulando uma hora -->
+                <!-- Você pode ajustar os horários e adicionar mais conforme necessário -->
+                <tr>
+                    <td class="border px-2 py-2">7:00 - 8:00</td>
+                    <td class="border px-2 py-2">Ártes</td>
+                    <td class="border px-2 py-2">Matemática</td>
+                    <td class="border px-2 py-2">História</td>
+                    <td class="border px-2 py-2">Geografia</td>
+                    <td class="border px-2 py-2">Português</td>
+                </tr>
+                <tr>
+                    <td class="border px-2 py-2">8:00 - 9:00</td>
+                    <td class="border px-2 py-2">Ártes</td>
+                    <td class="border px-2 py-2">Português</td>
+                    <td class="border px-2 py-2">Geografia</td>
+                    <td class="border px-2 py-2">Educação física</td>
+                    <td class="border px-2 py-2">Jogos</td>
+                </tr>
+                <tr>
+                    <td class="border px-2 py-2">9:00 - 10:00</td>
+                    <td class="border px-2 py-2">Recreio</td>
+                    <td class="border px-2 py-2">Recreio</td>
+                    <td class="border px-2 py-2">Recreio</td>
+                    <td class="border px-2 py-2">Recreio</td>
+                    <td class="border px-2 py-2">Recreio</td>
+                </tr>
+                <tr>
+                    <td class="border px-2 py-2">10:00 - 11:00</td>
+                    <td class="border px-2 py-2">Momento de Leitura</td>
+                    <td class="border px-2 py-2">Momento de Leitura</td>
+                    <td class="border px-2 py-2">Momento de Leitura</td>
+                    <td class="border px-2 py-2">Momento de Leitura</td>
+                    <td class="border px-2 py-2">Momento de Leitura</td>
+                </tr>
+                <tr>
+                    <td class="border px-2 py-2">11:00 - 12:00</td>
+                    <td class="border px-2 py-2">Karatê</td>
+                    <td class="border px-2 py-2">Balé</td>
+                    <td class="border px-2 py-2">Karatê</td>
+                    <td class="border px-2 py-2">Balé</td>
+                    <td class="border px-2 py-2">Karatê</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+            
+
+    <!-- Botão Flutuante no Canto Inferior Esquerdo -->
+    <div class="fixed bottom-28 left-4 z-50">
+        <button onclick="toggleFooter()" class="bg-blue-400 text-white py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue transition duration-300" title="Criadores do site">
+            ?
+        </button>
+    </div>
+
+    <!-- Rodapé inicialmente oculto -->
+    <footer id="meuRodape" class="sticky bottom-0 bg-blue-400 p-4 text-center opacity-0 transition-opacity  text-white duration-300 z-50"> 
+        <!-- Conteúdo do rodapé aqui -->
+        Criadores do site: Aecio Santos Nascimento Junior e Guilherme Jordan de Jesus Nascimento</br>
+        Curso: ADS </br>
+        Faculdade: Uninassau (SE)
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade do rodapé
+        function toggleFooter() {
+            const footer = document.getElementById('meuRodape');
+            footer.classList.toggle('opacity-0');
+            footer.classList.toggle('opacity-100');
+        }
+    </script>
+</body>
+</html>
